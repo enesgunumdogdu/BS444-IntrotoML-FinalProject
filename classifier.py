@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.metrics import mean_absolute_error, r2_score
 import xgboost as xgb
 import lightgbm as lgb
-import numpy as np
+import tkinter as tk
 
 ages = pd.read_csv('Ages.csv')
 data = pd.read_csv('data.csv')
