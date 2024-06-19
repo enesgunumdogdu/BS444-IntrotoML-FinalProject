@@ -1,7 +1,7 @@
-##BS444-Introduction to Machine Learning Dersi Final Projesi
+# BS444-Introduction to Machine Learning Dersi Final Projesi
 Bu proje, dışkı mikrobiyomlarından biyolojik yaş tahmini yapmayı hedeflemektedir.
 
-#Data
+## Data
 Bu projede kullanılan veri seti, 4274 kişinin bağırsak mikrop bileşimi verilerini ve bunlara karşılık gelen biyolojik yaş bilgilerini içermektedir. Veri dosyaları şu şekildedir:
 
 Ages.csv: Örnek isimlerini ve karşılık gelen biyolojik yaşları içerir.
