@@ -39,3 +39,20 @@ xgb_model = xgb.XGBRegressor(n_estimators=100, random_state=42)
 xgb_model.fit(X_train, y_train)
 
 models = {'Random Forest': rf_model, 'Gradient Boosting': gb_model, 'XGBoost': xgb_model} results = {} for name, model in models.items(): y_pred = model.predict(X_test) mae = mean_absolute_error(y_test, y_pred) r2 = r2_score(y_test, y_pred) results[name] = (mae, r2)
+
+root = tk.Tk()
+root.title("BS444 Introduction To ML Report")
+
+frame = ttk.Frame(root, padding="10")
+frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+
+ttk.Label(frame, text="Model").grid(column=1, row=1)
+ttk.Label(frame, text="Mean Absolute Error").grid(column=2, row=1)
+ttk.Label(frame, text="R^2 Score").grid(column=3, row=1)
+
+for idx, (name, (mae, r2)) in enumerate(results.items(), start=2):
+    ttk.Label(frame, text=name).grid(column=1, row=idx, sticky=tk.W)
+    ttk.Label(frame, text=f"{mae:.2f}").grid(column=2, row=idx, sticky=tk.W)
+    ttk.Label(frame, text=f"{r2:.2f}").grid(column=3, row=idx, sticky=tk.W)
+
+root.mainloop()
